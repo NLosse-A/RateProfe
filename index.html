@@ -1,0 +1,47 @@
+<!-- ================= index.html ================= -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RateProfe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="839861.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="navbar">
+      <div class="nav-title">RateProfe</div>
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="title">RateProfe</div>
+            <button class="btn" id="openModal">+ Agregar maestro</button>
+        </div>
+
+        <input type="text" id="search" class="search" placeholder="Buscar maestro o materia...">
+
+        <div class="info" id="info"></div>
+
+        <div id="list"></div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal hidden" id="modal">
+        <div class="modal-content">
+            <h2>Agregar maestro</h2>
+            <input type="text" id="name" placeholder="Nombre">
+            <input type="text" id="subject" placeholder="Materia">
+
+            <div class="star-input" id="starInput"></div>
+
+            <button id="save">Guardar</button>
+            <button id="close">Cancelar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,319 @@
+/* ===== VARIABLES (NUEVA BASE) ===== */
+:root {
+  --bg-primary: #14171f;
+  --bg-secondary: #1a1d26;
+  --bg-tertiary: #202531;
+  --bg-hover: #2a2f3a;
+  --bg-hover-light: #353b48;
+
+  --text-primary: #e6e9ef;
+  --text-secondary: #9aa0aa;
+
+  --accent: #fbbf24;
+  --danger: #dc2626;
+  --danger-hover: #b91c1c;
+
+  --border-radius: 12px;
+  --transition: 0.25s;
+}
+
+/* ===== BASE ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* ===== NAVBAR SUPERIOR ===== */
+.navbar {
+  width: 100%;
+  padding: 16px 24px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--bg-hover);
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* ===== LAYOUT ===== */
+.container {
+  width: 95%;
+  max-width: 1200px; /* 🔥 más grande en PC */
+  margin: 20px auto;
+}
+
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* ===== BOTONES ===== */
+button,
+.btn {
+  background: var(--bg-hover);
+  border: none;
+  padding: 10px 16px;
+  border-radius: var(--border-radius);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all var(--transition);
+  min-height: 42px;
+}
+
+button:hover,
+.btn:hover {
+  background: var(--bg-hover-light);
+  transform: translateY(-1px);
+}
+
+.btn-delete {
+  background: var(--danger);
+}
+
+.btn-delete:hover {
+  background: var(--danger-hover);
+}
+
+/* ===== INPUT ===== */
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--bg-hover);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+/* ===== CARDS ===== */
+.card {
+  background: var(--bg-secondary);
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  cursor: pointer;
+
+  border: 1px solid transparent;
+  transition: all var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: var(--bg-hover-light);
+}
+
+.name {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.subject,
+.info,
+#reviews,
+.rating {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+/* ===== ESTRELLAS ===== */
+.stars {
+  display: inline-flex;
+  gap: 4px;
+  margin-top: 8px;
+  font-size: 18px;
+  color: var(--accent);
+}
+
+#stars {
+  font-size: 24px;
+  margin: 12px 0;
+  color: var(--accent);
+}
+
+/* ===== DETAIL ===== */
+h1 {
+  margin-top: 10px;
+  font-size: 28px;
+}
+
+/* ===== COMENTARIOS ===== */
+.comment {
+  background: var(--bg-secondary);
+  border: 1px solid var(--bg-hover);
+  padding: 14px;
+  border-radius: 14px;
+  margin-top: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment button {
+  font-size: 12px;
+  padding: 6px;
+}
+
+/* ===== MODAL ===== */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: var(--bg-tertiary);
+  padding: 20px;
+  border-radius: 14px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  width: 90%;
+  max-width: 400px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ===== STAR INPUT ===== */
+.star-input {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.star-input span {
+  font-size: 34px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: all var(--transition);
+}
+
+.star-input span:hover,
+.star-input span.active {
+  color: var(--accent);
+  transform: scale(1.2);
+}
+
+/* ===== STATS ===== */
+.stats {
+  display: flex;
+  gap: 30px;
+  margin: 30px 0;
+}
+
+.average {
+  text-align: center;
+}
+
+#avgNumber {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+#avgStars {
+  color: var(--accent);
+}
+
+.distribution {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bar {
+  flex: 1;
+  height: 10px;
+  background: var(--bg-hover);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: var(--accent);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+
+  .container {
+    width: 95%;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .title {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  #stars,
+  #reviews {
+    text-align: center;
+  }
+
+  .stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #avgNumber {
+    font-size: 32px;
+  }
+
+  .distribution {
+    width: 100%;
+  }
+
+  .comment {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .comment button {
+    align-self: flex-end;
+  }
+}

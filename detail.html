@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle Maestro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="839861.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="navbar">
+      <div class="nav-title">RateProfe</div>
+    </div>
+    <div class="container">
+        <button onclick="goBack()">⬅ Volver</button>
+        <button onclick="openDeleteModal()" class="btn-delete">Eliminar</button>
+
+        <h1 id="name"></h1>
+        <div class="stats">
+            <div class="average">
+                <span id="avgNumber">0.0</span>
+                <div id="avgStars"></div>
+                <span id="totalReviews">0 reseñas</span>
+            </div>
+
+            <div class="distribution" id="distribution"></div>
+        </div>
+        <p id="subject"></p>
+
+        <div id="stars"></div>
+        <p id="reviews"></p>
+    </div>
+
+    <!-- Modal -->
+    <div id="deleteModal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Confirmar eliminación</h2>
+            <p>¿Seguro que deseas eliminar este maestro?</p>
+
+            <div class="modal-buttons">
+                <button id="confirmDelete" class="btn-delete">Eliminar</button>
+                <button id="cancelDelete" class="btn">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="detail.js"></script>
+</body>
+
+</html>
